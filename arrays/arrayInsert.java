@@ -1,4 +1,4 @@
- public int[] arrayInsert(int[] a, int insertIndext, int number) {
+  public int[] arrayInsert(int[] a, int insertIndext, int number) {
        /* 先来解决第一种情况，我们如果插入这个数组它有空位，0代表空位，我们就只需要找到后面的元素的
         第一个空位依次往后移动把需要插入的元素给它留出位置，然后根据索引下标插入元素即可*/
         int firstEmptyIndex = -1;//初始值定为-1，表示我们没有找到空元素
@@ -20,8 +20,8 @@
         }
         /*这部分代码用来实现将我要插入的索引的位置开始把它的元素依次往后移动，记住这里有一个小细节，
         我们移动元素只能从后面往前面一个一个的移动不然会出现元素覆盖的情况*/
-        for (int j = firstEmptyIndex - 1; j >= insertIndext; j--) {
-            a[j + 1] = a[j];
+        for (int i = firstEmptyIndex - 1; i >= insertIndext; i--) {
+            a[i + 1] = a[i];
         }
         a[insertIndext] = number;
         return a;
